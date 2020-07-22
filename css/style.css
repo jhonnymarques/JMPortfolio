@@ -9,18 +9,43 @@
 }
 
 body {
+  height: 100vh;
   font-family: "Fira Mono", monospace;
 }
 
+/* MENU */
 header {
-  min-width: 900px;
   background: #282a36;
-  display: grid;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  grid-template-columns: 500px 1fr 1fr;
-  padding: 1.25rem;
+  padding: 0.75rem;
 }
 
+header .links {
+  width: 100%;
+  max-width: 980px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  margin-left: 0.625rem;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+.links a {
+  color: #8be9fd;
+}
+
+.links a:hover {
+  color: #3fc772;
+  transition: color 1.4s;
+}
+
+/* LOGO */
 .logo {
   max-width: 2.5rem;
   font-size: 1.75rem;
@@ -34,29 +59,87 @@ span.color2 {
   color: #8be9fd;
 }
 
-.links {
-  display: flex;
+/* REDES SOCIAIS */
+.social-medias img {
+  width: 100%;
+  max-width: 28px;
+  margin-left: 0.625rem;
 }
 
-.links a {
+/* PERFIL */
+.profile {
+  background: #2e313d;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 90px;
+}
+
+.profile img {
+  width: 225px;
+  height: 225px;
+  display: grid;
+  border: 1px solid #f8f8f2;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+.title-specialty {
+  color: #ff79c5;
+  grid-column: 1;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.animated-text {
+  grid-column: 2;
+}
+
+.animated-text .line {
+  grid-column: 2;
+}
+
+.line {
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typing-animation {
+  animation: blinkCursor 500ms steps(40) infinite normal,
+    typing 6s infinite steps(40) 2s normal;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 30rem;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.console {
+  color: #b491f9;
+}
+
+.dot {
+  color: white;
+}
+
+.log {
   color: #8be9fd;
 }
 
-.links a:hover {
-  color: #3fc772;
-  transition: color 1.4s;
-}
-
-.menu li {
-  margin-left: 0.625rem;
-}
-
-.social-medias {
-  display: flex;
-}
-
-.social-medias a img {
-  width: 28px;
-  display: flex;
-  margin-left: 0.625rem;
+.message {
+  color: #f1f178;
 }
