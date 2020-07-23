@@ -67,37 +67,47 @@ span.color2 {
 }
 
 /* PERFIL */
-.profile {
+.card-profile {
   background: #2e313d;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  /* align-items: center; */
   padding: 90px;
 }
 
-.profile img {
+.profile{
+  width: 260px;
+  align-items: center;
+}
+
+.profile .profile-img {
   width: 225px;
   height: 225px;
-  display: grid;
+  /* display: grid; */
+  grid-column: 1;
   border: 1px solid #f8f8f2;
   box-sizing: border-box;
   border-radius: 50%;
 }
 
-.title-specialty {
+.profile p.profile-title{
   color: #ff79c5;
-  grid-column: 1;
-  font-size: 1.2rem;
-  margin-top: 20px;
+  margin-top: 0.5rem;
+  font-size: 18px;
 }
+
+.profile p.profile-title2{
+  color: #F0F387;
+  margin-top: 0.4rem;
+  font-size: 14px;
+}
+
 
 .animated-text {
   grid-column: 2;
 }
 
-.animated-text .line {
-  grid-column: 2;
-}
+
 
 .line {
   border-right: 2px solid rgba(255, 255, 255, 0.75);
@@ -115,7 +125,7 @@ span.color2 {
     width: 0;
   }
   to {
-    width: 30rem;
+    width: 24rem;
   }
 }
 
@@ -142,4 +152,10 @@ span.color2 {
 
 .message {
   color: #f1f178;
+}
+
+.skills{
+  grid-row: 3/3;
+  display: flex;
+  margin: 0 auto;
 }
